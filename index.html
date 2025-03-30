@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Nintendo Switch</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
     <!-- Top -->
     <div class="top-bar">
         <div class="left">
@@ -15,7 +14,7 @@
         </div>
         <div class="right">
             <div id="time"></div>
-            <img src="wifi.png" alt="Icône Wi-Fi" class="wifi-icon">
+            <img src="img/wifi.png" alt="Icône Wi-Fi" class="wifi-icon">
             <div class="battery">
                 <div class="battery-level"></div>
             </div>
@@ -44,23 +43,23 @@
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
-        <div class="circle"></div>
+        <div class="circle" data-text="Shutdown" onclick="shutdown()"></div>
     </div>
 
     <!-- Bottom -->
     <div class="bottom">
         <div class="left-bottom">
-            <img src="switch.png" alt="Icône switch" class="icon">
+            <img src="img/switch.png" alt="Icône switch" class="icon">
         </div>
         <div class="right-bottom">
             <!-- <img src="select.png" alt="Icône +-" class="select"> -->
             <h2>Options</h2>
-            <img src="a.png" alt="Icône A" class="select">
+            <img src="img/a.png" alt="Icône A" class="select">
             <h2>Start</h2>
         </div>
     </div>
 
-    <script src="top-bar.js"></script>
+    <script src="js/top-bar.js"></script>
 
 </body>
 </html>

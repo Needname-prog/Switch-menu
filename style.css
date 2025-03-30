@@ -88,9 +88,9 @@ html, body {
     background-size: cover;
 }
 
-.square:nth-child(1) { background-image: url('test.png'); }
-.square:nth-child(2) { background-image: url('test.png'); }
-.square:nth-child(3) { background-image: url('test.png'); }
+.square:nth-child(1) { background-image: url('img/'); }
+.square:nth-child(2) { background-image: url('img/'); }
+.square:nth-child(3) { background-image: url('img/'); }
 
 .square::before {
     content: "";
@@ -154,9 +154,23 @@ html, body {
     width: 70px;
     height: 70px;
     margin-bottom: 35px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease-out;
     position: relative;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.circle:nth-child(1) { background-image: url('img/'); }
+.circle:nth-child(2) { background-image: url('img/'); }
+.circle:nth-child(3) { background-image: url('img/'); }
+.circle:nth-child(4) { background-image: url('img/'); }
+.circle:nth-child(5) { background-image: url('img/'); }
+.circle:nth-child(6) { 
+	background-image: url('../img/shutdown.png');
+	background-size: 55%; 
+	background-color: white;
+	background-repeat: no-repeat;
 }
 
 .circle::before {
@@ -177,12 +191,36 @@ html, body {
 .circle:hover {
     transform: scale(1.05);
 }
+
+.circle::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'NintendoSwitchUI', sans-serif;
+    font-size: 20px;
+    color: #00A9FF;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    pointer-events: none;
+}
+
+.circle:hover::after {
+    opacity: 1;
+}
+
+
 .profil {
     width: 50px;
     height: 50px;
     margin-left: 50px;
     border: 3px solid white;
+    background-position: center;
+    background-size: cover;
 }
+
+.profil:nth-child(1) { background-image: url('pdp.png'); }
 
 .settings {
     display: flex;

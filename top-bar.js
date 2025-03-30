@@ -13,3 +13,7 @@ function checkTime(i) {
 }
  
 startTime();
+
+function shutdown() {
+    window.close();
+}
