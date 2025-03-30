@@ -16,7 +16,7 @@ Ce projet vise à recréer l'interface de la Nintendo Switch en utilisant : HTML
 ## Installation
 1. Clone ce dépôt :
    ```sh
-   git clone https://github.com/ton-repo/nintendo-switch-ui.git
+   git clone https://github.com/Needname-prog/Switch-menu.git
    ```
 2. Ouvre le fichier `index.html` dans un navigateur.
 
