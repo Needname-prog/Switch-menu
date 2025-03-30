@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const shutdownButton = document.getElementById("shutdown");
+
+    if (shutdownButton) {
+        shutdownButton.addEventListener("click", () => {
+            window.close();
+        });
+    }
+});
+
 function startTime() {
   var today = new Date();
   var h = today.getHours();
@@ -13,7 +23,3 @@ function checkTime(i) {
 }
  
 startTime();
-
-function shutdown() {
-    window.close();
-}

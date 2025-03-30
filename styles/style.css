@@ -220,7 +220,7 @@ html, body {
     background-size: cover;
 }
 
-.profil:nth-child(1) { background-image: url('pdp.png'); }
+.profil:nth-child(1) { background-image: url('../img/pdp.png'); }
 
 .settings {
     display: flex;
