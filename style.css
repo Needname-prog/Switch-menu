@@ -13,7 +13,6 @@
 html, body {
     height: 100%;
     font-family: 'NintendoSwitchUI', sans-serif;
-    text-shadow: 0.5px 0.5px 0px #2e2e2e;
 }
 
 .top-bar {
@@ -31,21 +30,22 @@ html, body {
 
 .right {
     display: flex;
-    gap: 30px;
+    gap: 27px;
     align-items: center;
-    margin-right: 50px;
+    margin-right: 70px;
 }
 
 #time {
-	letter-spacing: 1.5px;
-    font-size: 30px;
+	letter-spacing: 1.8px;
+    font-size: 25px;
     color: #2e2e2e;
+    text-shadow: 0.4px 0.4px 0px #2e2e2e;
 }
 
 .battery {
-    width: 40px;
-    height: 15px;
-    border: 6px solid #2e2e2e;
+    width: 22px;
+    height: 10px;
+    border: 3.5px solid #2e2e2e;
     position: relative;
     display: flex;
     align-items: center;
@@ -54,18 +54,18 @@ html, body {
 
 .battery-level {
     height: 100%;
-    width: 50%;
+    width: 85%;
     background: #2e2e2e;
     transition: width 0.3s ease-in-out, background 0.3s;
 }
 
 .battery::after {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 3px;
+    height: 7px;
     background: #2e2e2e;
     position: absolute;
-    right: -10px;
+    right: -6px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -84,7 +84,13 @@ html, body {
     width: 250px;
     background-color: grey;
     position: relative;
+    background-position: center;
+    background-size: cover;
 }
+
+.square:nth-child(1) { background-image: url('test.png'); }
+.square:nth-child(2) { background-image: url('test.png'); }
+.square:nth-child(3) { background-image: url('test.png'); }
 
 .square::before {
     content: "";
@@ -97,7 +103,17 @@ html, body {
 
 .square:hover::before {
     opacity: 1;
-    box-shadow: 0px 10px 10px -4px black;
+    box-shadow: 0px 7px 7px -4px rgba(0, 0, 0, 0.3);
+    animation: glowEffect 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes glowEffect {
+    0% {
+        border-color: #00A9FF;
+    }
+    100% {
+        border-color: #00D0FF;
+    }
 }
 
 .square:first-child {
@@ -108,6 +124,11 @@ html, body {
     background-color: #ebebeb;
     height: 10%;
     position: relative;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    bottom: 0;
 }
 
 .bottom::before {
@@ -118,6 +139,7 @@ html, body {
     height: 2px;
     background-color: #2e2e2e;
     transform: translateX(-50%);
+    top: 0;
 }
 
 .circle, .profil {
@@ -132,12 +154,34 @@ html, body {
     width: 70px;
     height: 70px;
     margin-bottom: 35px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-out;
+    position: relative;
 }
 
+.circle::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border: 5px solid #00A9FF;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+.circle:hover::before {
+    opacity: 1;
+    animation: glowEffect 0.5s infinite alternate ease-in-out;
+}
+
+.circle:hover {
+    transform: scale(1.05);
+}
 .profil {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin-left: 50px;
+    border: 3px solid white;
 }
 
 .settings {
@@ -150,6 +194,36 @@ html, body {
 }
 
 .wifi-icon {
-    width: 40px;
+    width: 30px;
     height: auto;
+}
+
+.right-bottom {
+	display: flex;
+    gap: 35px;
+    align-items: center;
+    margin-right: 70px;
+}
+
+.right-bottom h2 {
+	font-weight: 1;
+}
+
+.left-bottom {
+	display: flex;
+    gap: 35px;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.select {
+    width: 32px;
+    height: 32px;
+    margin-right: -25px;
+}
+
+.icon {
+	width: 70px;
+	height: 47px;
+	margin-top: 20px;
 }
