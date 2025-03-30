@@ -20,7 +20,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
+    background-color: #ebebeb;
     width: 100%;
     height: 20%;
 }
@@ -31,9 +31,9 @@ html, body {
 
 .right {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 50px;
 }
 
 #time {
@@ -73,7 +73,7 @@ html, body {
 .jeu {
     display: flex;
     align-items: center;
-    background-color: red;
+    background-color: #ebebeb;
     height: 50%;
     width: 400%;
     gap: 20px;
@@ -82,7 +82,22 @@ html, body {
 .square {
     height: 250px;
     width: 250px;
-    background-color: white;
+    background-color: grey;
+    position: relative;
+}
+
+.square::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border: 5px solid #00A9FF;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+.square:hover::before {
+    opacity: 1;
+    box-shadow: 0px 10px 10px -4px black;
 }
 
 .square:first-child {
@@ -90,7 +105,7 @@ html, body {
 }
 
 .bottom {
-    background-color: red;
+    background-color: #ebebeb;
     height: 10%;
     position: relative;
 }
@@ -100,8 +115,8 @@ html, body {
     position: absolute;
     left: 50%;
     width: 95%;
-    height: 3px;
-    background-color: white;
+    height: 2px;
+    background-color: #2e2e2e;
     transform: translateX(-50%);
 }
 
@@ -109,7 +124,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: grey;
     border-radius: 50%;
 }
 
@@ -130,6 +145,11 @@ html, body {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    background-color: red;
+    background-color: #ebebeb;
     height: 20%;
+}
+
+.wifi-icon {
+    width: 40px;
+    height: auto;
 }
