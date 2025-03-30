@@ -32,9 +32,3 @@ Ce projet vise à recréer l'interface de la Nintendo Switch en utilisant : HTML
 - Intégration d'un système de profils
 - Amélioration des animations et des transitions
 
-## Contributions
-Les contributions sont les bienvenues ! N'hésite pas à proposer des améliorations ou à signaler des bugs via les issues du dépôt.
-
-## Licence
-Ce projet est sous licence MIT.
-
