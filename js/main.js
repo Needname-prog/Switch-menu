@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1000);
 
             setTimeout(() => {
-                window.location.href = "jeu.html";
+                window.location.href = "html/calculette.html";
             }, 1800);
         });
     });
